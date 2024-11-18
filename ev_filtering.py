@@ -45,7 +45,7 @@ with st.form("input"):
             }).reset_index()
 
             # Plot the data
-            st.subheader("충전소별 충전기 용량")
+            st.subheader("Charger capacity by charging station")
             st.dataframe(filtered_data)
             fig, ax = plt.subplots(figsize=(10, 6))
             result.plot(
@@ -55,9 +55,9 @@ with st.form("input"):
                 stacked=True,
                 ax=ax
             )
-            ax.set_title("충전소별 충전기 용량")
-            ax.set_ylabel("충전기 개수")
-            ax.set_xlabel("충전소")
+            ax.set_title("Charger capacity by charging station")
+            ax.set_ylabel("Number of chargers")
+            ax.set_xlabel("Charging station")
             st.pyplot(fig)
         else:
-            st.warning("선택한 조건에 맞는 데이터가 없습니다.") 
+            st.warning("선택한 조건에 맞는 데이터가 없습니다.")

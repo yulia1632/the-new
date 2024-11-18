@@ -24,7 +24,8 @@ charger_color = {'Fast': '#09d99a', 'Standard': '#ebbb37', 'Mixed': '#42a5f5'}
 data['color'] = data.copy()['Charger Type'].map(charger_color)
 
 # Display map
-st.title("전기차 충전소 현황")
+st.title("ev map")
+st.write("This is the EV Map page.")
 st.map(data,
        latitude="Latitude",
        longitude="Longitude",
